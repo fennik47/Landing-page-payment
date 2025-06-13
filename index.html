@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fennik Store - Pembayaran</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function openDANA() {
+      window.location.href = 'dana://send?phone=085710798540';
+    }function copyRek() {
+  const norek = '501901032298537';
+  navigator.clipboard.writeText(norek).then(() => {
+    alert('✅ Nomor rekening berhasil disalin!');
+  });
+}
+
+  </script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <div class="max-w-xl mx-auto p-6">
+    <h1 class="text-2xl font-bold text-center mb-4">Pembayaran - Fennik Store</h1>
+    <p class="text-center mb-6">Berikut metode pembayaran milik Fennik Store</p><!-- QRIS Section -->
+<div class="bg-white p-4 rounded-lg shadow mb-6">
+  <h2 class="text-xl font-semibold mb-2">Bayar via QRIS</h2>
+  <input type="number" placeholder="Masukkan nominal" class="w-full p-2 border rounded mb-3">
+  <img src="/qris.png" alt="QRIS" class="w-full rounded-lg border">
+</div>
+
+<!-- DANA Button -->
+<div class="bg-white p-4 rounded-lg shadow mb-6">
+  <h2 class="text-xl font-semibold mb-2">Transfer via DANA</h2>
+  <button onclick="openDANA()" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Bayar Lewat Aplikasi DANA</button>
+  <p class="text-sm text-gray-600 text-center mt-2">Tujuan: 085710798540</p>
+</div>
+
+<!-- SeaBank Info -->
+<div class="bg-white p-4 rounded-lg shadow mb-6">
+  <h2 class="text-xl font-semibold mb-2">Transfer via SeaBank</h2>
+  <div class="flex items-center justify-between">
+    <div>
+      <p class="font-medium">Rek: 501901032298537</p>
+      <p class="text-sm text-gray-500">A/N: Muhammad Fennik</p>
+    </div>
+    <button onclick="copyRek()" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Salin</button>
+  </div>
+</div>
+
+<!-- Footer Logo Example -->
+<div class="text-center mt-8">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Contoh Logo" class="h-10 mx-auto mb-2">
+  <p class="text-sm text-gray-500">© 2025 Fennik Store. All rights reserved.</p>
+</div>
+
+  </div>
+</body>
+</html>
